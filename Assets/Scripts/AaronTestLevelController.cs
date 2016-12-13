@@ -2,6 +2,7 @@
 using System.Collections;
 
 public class AaronTestLevelController : BaseLevelController {
+    bool bossSpawned = false;
 
 	// Use this for initialization
 	void Start () {
@@ -21,8 +22,11 @@ public class AaronTestLevelController : BaseLevelController {
 
     protected override void UnitDeath()
     {
-        if (UnitTracker.GetActiveEnemyCount() == 0)
+        if (UnitTracker.GetActiveEnemyCount() == 0 && !bossSpawned)
+        {
             UnitSpawner.SpawnUnit(UnitReferences.EnemyBattleship, new Vector3(0, 100, 200));
+            bossSpawned = true;
+        }
         
     }
 

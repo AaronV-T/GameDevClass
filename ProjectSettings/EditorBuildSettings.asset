@@ -17,3 +17,5 @@ EditorBuildSettings:
     path: Assets/_Scenes/Level3.unity
   - enabled: 1
     path: Assets/_Scenes/Trench.unity
+  - enabled: 1
+    path: Assets/_Scenes/Escort.unity

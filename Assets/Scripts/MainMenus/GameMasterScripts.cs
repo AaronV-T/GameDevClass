@@ -106,8 +106,8 @@ public class GameMasterScripts : MonoBehaviour {
         }
 	}
 
-	// Update is called once per frame
-	void Update () {
-	
-	}
+	public void ExitGame()
+    {
+        Application.Quit();
+    }
 }
